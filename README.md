@@ -1,4 +1,6 @@
 django-in-gae
 =============
 
-Aplicação em Django e Google App Engine
+Aplicação em desenvolvida utilizando os frameworks:
+	- Django
+	- Google App Engine
