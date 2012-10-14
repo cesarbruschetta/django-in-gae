@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#Script de start do servidor de desenvolvimento para o google app engine
+#http://marcioandreyoliveira.blogspot.com.br/2009/04/13-passos-simples-para-termos-o-django.html
+
+/home/cesaraugusto/bin/google_appengine/dev_appserver.py --blobstore_path=./ --datastore_path=./dev_appserver.datastore ./
