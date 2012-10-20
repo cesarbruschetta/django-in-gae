@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Previsão do Tempo  || {% block title %}{% endblock %}</title>
+		
+		<meta name="keywords" content="clima, clima no celular, fases da lua, meteorologia, notícias climáticas, previsão, 
+									   previsão climática, previsão do tempo, tempo no celular, umidade relativa, vídeos de previsão do tempo " />
+		<meta name="description" content="No nosso portal você encontra além da previsão do tempo, notícias, vídeos, tempo real,
+										 serviços de consultoria e muito mais sobre o tempo e o clima na sua região." />
+		
+		<link href="/media/templatemo_style.css" rel="stylesheet" type="text/css" />
+		<link type="image/x-icon" href="/media/favicon.ico" rel="shortcut icon">
+		
+		<link rel="stylesheet" type="text/css" href="/media/content_slider_style.css" />
+		<script type="text/javascript" src="/media/js/jquery.1.3.2.min.js" ></script>
+		<script type="text/javascript" src="/media/js/jquery-ui.min.js" ></script>
+		<!--script type="text/javascript">
+			$(document).ready(function(){
+				$("#featured > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 5000, true);
+			});
+		</script-->
+	
+	  	{% block external %}{% endblock %}
+	
+	</head>
+	<body>
+		<div id="templatemo_wrapper_outer">
+			<div id="templatemo_wrapper">
+			    <div id="templatemo_header">
+			
+			    	<div id="site_title">
+			            <h1><a href="/">
+			            	<img src="/images/templatemo_logo.png" alt="logo" />
+							<span>Free CSS Templates</span></a>
+						</h1>
+			        </div> <!-- end of site_title -->
+			        
+			        <div id="templatemo_menu">
+			        	<!-- Memu do Portal -->
+						{% include "menu_itens.html" %}
+			        </div> <!-- end of templatemo_menu -->
+			
+			    </div> <!-- end of templatemo_header -->
+			    
+			    <div id="templatemo_slider">
+					<div id="featured" >
+						<!-- Area para o Slider Show -->
+			    
+					</div>
+				</div> <!-- end of templatemo_slider -->
+			    
+			    <div id="templatemo_content">
+			    	<!-- Conteudo do Site -->
+		          	<h1>{% block head %}{% endblock %}</h1>
+				  	{% block content %}{% endblock %}
+			        
+			    	<div class="cleaner"></div>
+			    </div>
+			    
+				<div class="cleaner"></div>
+			</div>
+		</div>
+		<div id="templatemo_footer_wrapper">
+			<div id="footer_top"></div>
+			<div id="templatemo_footer">
+		        <div class="col_w220">
+		            <h5>Siga-nos</h5>
+		            <p>Fique atualizado com o que está acontecendo.</p>
+		            <ul id="social_box">
+		                <li><a href="http://www.facebook.com/cesarbruschetta"><img src="/media/images/facebook.png" alt="Facebook" /></a></li>
+		                <li><a href="http://twitter.com/cesarbruschetta"><img src="/media/images/twitter.png" alt="Twitter" /></a></li>
+		                <li><a href="http://www.linkedin.com/pub/cesar-bruschetta/32/a2b/382"><img src="/media/images/linkedin.png" alt="Linkedin" /></a></li>
+		            </ul>
+		        </div>
+		        
+		        <div class="col_w220">
+		            <h5>Our Pages</h5>
+		            <ul class="tmo_list">
+		                <li><a href="index.html">Home</a></li>
+		                <li><a href="services.html">Services</a></li>
+		                <li><a href="news.html">News</a></li>
+		                <li><a href="about.html">About us</a></li>
+		                <li><a href="contact.html">Contact</a></li>
+		            </ul>  
+		 
+		        </div>
+		        
+		        <div class="col_w220">
+		            <!--h5>Partners</h5>
+					<ul class="tmo_list">
+		                <li><a href="http://www.templatemo.com">Free CSS Templates</a></li>
+		                <li><a href="http://www.koflash.com">Websites Gallery</a></li>
+		                <li><a href="http://www.flashmo.com/store">Premiun Templates</a></li>
+		                <li><a href="http://www.templatemo.com/page/1">Website Layouts</a></li>
+						<li><a href="http://www.flashmo.com">Flash Templates</a></li>
+		            </ul-->
+		 
+		        </div>
+		        <div class="col_w220 col_last">
+		            <h5>Links</h5>
+		            <ul class="tmo_list">
+		                <li><a href="http://www.climatempo.com.br/" target="_blank">Clima Tempo</a></li>
+		                <li><a href="http://www3.uol.com.br/tempo/" target="_blank">Uol Tempo, Trânsito</a></li>
+		                <li><a href="http://ultimosegundo.ig.com.br/brasil/tempo/" target="_blank">Último Segunda</a></li>
+		            </ul>    
+		        </div>
+		        
+		        <div class="cleaner"></div>
+		    </div> <!-- end of footer -->
+		    <div id="templatemo_copyright">
+		        Copyright © 2048 <a href="/media/sobre.html" target="popupwindow" 
+		   						    onclick='window.open("/static/sobre.html", "popupwindow", "scrollbars=yes,width=590,height=360");return true'>Cesar Augusto</a> |
+									 Todos os direitos reservados
+		    </div>
+		</div>
+	</body>
+</html>

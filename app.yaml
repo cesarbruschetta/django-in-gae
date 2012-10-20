@@ -4,10 +4,28 @@ runtime: python26
 api_version: 1
 threadsafe: no
 
+builtins:
+- appstats: on
+- deferred: on
+- datastore_admin: on
+- remote_api: on
+
+inbound_services:
+- warmup
+
+
 handlers:
 - url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
+  static_files: django_in_gae/media/favicon.ico
+  upload: django_in_gae/media/favicon.ico
+  mime_type: image/vnd.microsoft.icon
+
+- url: /robots\.txt
+  static_files: django_in_gae/media/robots.txt
+  upload: django_in_gae/media/robots.txt
+
+- url: /media
+  static_dir: django_in_gae/media  
 
 - url: /.*
   script: main.py
