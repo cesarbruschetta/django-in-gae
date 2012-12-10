@@ -1,7 +1,12 @@
 <ul>
-    <li><a href="index.html" class="current">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="about.html">About us</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="/" 
+		   class="{% if current_path == '/' %}current{% endif %}">Home</a></li>
+    
+	{% for item in Menu %} 
+		<li><a href="/cidade/{{ item.id }}"
+			   class="{% if item.id in current_path %}current{% endif %}"
+		>{{ item.name }}</a></li>
+    {% endfor %}
+	
+    <li><a href="/search">Busca</a></li>
 </ul> 
