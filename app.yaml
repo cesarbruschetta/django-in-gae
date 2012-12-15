@@ -1,6 +1,6 @@
 application: django-in-gae
 version: 1
-runtime: python26
+runtime: python
 api_version: 1
 threadsafe: no
 
