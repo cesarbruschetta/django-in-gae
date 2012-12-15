@@ -15,6 +15,7 @@ def home(request):
      
 def capitais(request,cidade):
     contexto = {}
+    data = {}
     cod_city = {'riodejaneiro-rj':'BRXX0201',
                 'brasilia-df':'BRXX0043',
                 'saopaulo-sp':'BRXX0232',
@@ -22,13 +23,21 @@ def capitais(request,cidade):
                 'belohorizonte-mg':'BRXX0033'}
     
     name_city = {'riodejaneiro-rj':'Rio de Janeiro',
-                'brasilia-df':'São Paulo',
-                'saopaulo-sp':'Brasilia',
+                'brasilia-df':'Brasilia',
+                'saopaulo-sp':'São Paulo',
                 'vitoria-es':'Vítoria',
                 'belohorizonte-mg':'Belo Horizonte'} 
     
-    
-    contexto['presicao'] = getPrevisaoByWC(cod_city.get(cidade))
+    dados = getPrevisaoByWC(cod_city.get(cidade))
+    if dados:
+        weatherdata = dados.get('weatherdata')
+        previsao = weatherdata.get('weather')
+        data['url'] = previsao.get('imagerelativeurl','')
+        
+        data['agora'] = previsao.get('current',{})
+        data['tempo'] =  previsao.get('forecast',[])
+        
+    contexto['previsao'] = data
     contexto['cidade'] = name_city.get(cidade)    
     
     return render_to_response('capitais.html',

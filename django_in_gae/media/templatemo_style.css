@@ -22,7 +22,7 @@ p { margin: 0px; padding: 0; }
 img { border: none; }
 
 h1, h2, h3, h4, h5, h6 { color: #183544; }
-h1 { font-size: 40px; font-weight: normal; margin: 0 0 30px 0; padding: 5px 0; }
+h1 { font-size: 40px; font-weight: normal; margin: 0 0 30px 0; padding: 5px 0; line-height: normal; }
 h2 { font-size: 28px; font-weight: normal; margin: 0 0 30px 0; padding: 0; }
 h2 span { font-weight: bold; }
 h3 { font-size: 21px; margin: 0 0 15px 0; padding: 0; padding: 0; color: #000; font-weight: normal; }
@@ -163,8 +163,8 @@ em { color: #000; }
 
 #templatemo_slider {
 	width: 860px;
-	height: 260px;
-	padding: 30px 40px;
+	/*height: 260px;*/
+	padding: 21px 40px;
 	margin-bottom: 30px;
 	background: url(images/templatemo_sp_box.png) no-repeat;
 }
@@ -179,18 +179,35 @@ em { color: #000; }
 	margin-bottom: 10px;
 }
 
+#templatemo_content span {
+	width:100%;
+	float:left;
+}
+
+
 .col_w300 {
 	float: left;
 	width: 280px;
-	padding-right: 20px;
-	margin-right: 20px;
+	/*
+padding-right: 20px;
+*/
+	margin-left: 20px;
 }
 
 .col_w600 {
 	float: left;
 	width: 600px;
-	padding-right: 20px;
+	/*
+padding-right: 20px;
+*/
 	margin-right: 20px;
+}
+
+.col_w450 {
+	float: left;
+	width: 450px;
+	/*padding-right: 20px;*/
+	margin-left: 20px;
 }
 
 .col_w280 {
@@ -199,9 +216,28 @@ em { color: #000; }
 
 .col_w220 {
 	float: left;
-	width: 200px;
+	width: 180px;
+	
 	padding-right: 20px;
-	margin-right: 20px;
+	/*margin-right: 20px;*/
+}
+.hoje{
+	width: 240px;
+}
+
+.previsao{
+	background:#fff;
+	margin:10px;
+	padding:10px;
+	padding-right:0px;
+	margin-right:0px;
+	float:left;
+}
+.img-tempo{
+	text-align:center;
+	margin-bottom:10px;
+	float:left;
+	width:100%;
 }
 
 .col_last {

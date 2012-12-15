@@ -36,7 +36,7 @@ class _DictSAXHandler(object):
                  item_depth=0,
                  item_callback=lambda *args: True,
                  xml_attribs=True,
-                 attr_prefix='@',
+                 attr_prefix='',
                  cdata_key='#text',
                  force_cdata=False,
                  cdata_separator='',
