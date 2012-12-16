@@ -1,4 +1,4 @@
 cron:
 - description: Manter Site
-  url: /hello
+  url: /hello/
   schedule: every 10 minutes synchronized
