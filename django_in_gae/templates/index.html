@@ -1,62 +1,9 @@
 {% extends "base.html" %}
 {% block title %} Home Page {% endblock %}
+
+{% block head %} Precisão do tempo na sua cidade ({{ cidade }}){% endblock %}
 {% block content %}
 
-<div class="col_w300">
-					
-			        	<h2>OUR <span>NEWS</span></h2>
-			            <div class="sb_news_box"><img src="images/templatemo_image_04.jpg" alt="Image 04" />
-			    			<h6><a href="#">Ut volutpat erat nec mauris</a></h6>
-			                
-			                Fusce sem nulla, rutrum ac suscipit eget, commodo vitae est.
-			              <div class="cleaner"></div>
-			            </div>
-						
-			            <div class="sb_news_box">
-			            <img src="images/templatemo_image_05.jpg" alt="Image 05" />
-			                <h6><a href="#">Vestibulum pharetra tortor</a></h6>
-			                 Donec et purus velit, eget euismod risus consectetur dolo.
-			                <div class="cleaner"></div>
-			            </div>
-						
-			            <div class="sb_news_box">
-			       	    <img src="images/templatemo_image_06.jpg" alt="Image 06" />
-			                <h6><a href="#">Morbi vitae velit eget</a></h6>
-			                Cras suscipit condimentum dolor, in facilisis est adipiscing.
-			                <div class="cleaner"></div>
-			            </div>
-						
-			            <div class="sb_news_box">
-			       	    <img src="images/templatemo_image_07.jpg" alt="Image 07" />
-			                <h6><a href="#">Etiam a enim id sapien</a></h6>
-			                Praesent ultrices nunc sit amet nulla vestibulum pellentesque.
-			                <div class="cleaner"></div>
-			            </div>
-			            
-			            <div class="btn_more"><a href="news.html">Read more</a></div>	
-			        </div>
-			        
-			        <div class="col_w300">
-			            <h2>OUR <span>SERVICES</span></h2>
-			            <div class="image_wrapper"><img width="240" height="110" src="images/templatemo_image_01.jpg" alt="Image01" /></div>
-			            <p><em>Morbi sed nulla ac est cursus suscipit eu ac lectus. Curabitur  ullamcorper nibh nisi, sed eleifend dolor. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>.</em></p>
-			                        
-			            <ul class="tmo_list">
-			                <li>Duis bibendum diam et eros</li>
-			                <li>Etiam accumsan ante ac augue</li>
-			                <li>Nullam faucibus tortor in sem</li>
-			                <li>Phasellus cursus congue arcu</li>                        
-			            </ul>
-			            <div class="cleaner"></div>
-			            <div class="btn_more"><a href="services.html">Read more</a></div>
-			        </div>
-			        
-			        <div class="col_w300 col_last">
-			            <h2>ABOUT US</h2>
-			            <div class="image_wrapper"><img width="240" height="110" src="images/templatemo_image_02.jpg" alt="Image 02" /></div>
-			            <p><em>Etiam ut urna ante, ut pulvinar ante. Vivamus a metus quam. Aenean non eros nunc. </em></p>
-			            <p>Sailing is a  <a href="http://www.templatemo.com">Free CSS Template</a>  provided by <a href="http://www.templatemo.com" target="_parent">templatemo.com</a>. Feel free to use this template for your websites. Credits go to <a href="http://www.photovaco.com" target="_blank">Free Photos</a> for photos and <a href="http://www.brusheezy.com/brush/1400-24-Clouds" target="_blank">Milanda Design</a> for a Photoshop Brush. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac elit est, eget hendrerit erat. Morbi nec dui augue, eget dictum.</p>
-			          <div class="btn_more"><a href="about.html">Read more</a></div>
-			      </div>
+{% include 'previsao.html' %}
 				  
 {% endblock %}				  

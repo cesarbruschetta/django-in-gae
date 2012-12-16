@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %} Busca {% endblock %}
+{% block head %}Busque uma cidade para saber a precisão do tempo{% endblock %}
+{% block content %}
+
+{% if not results %} 
+<form id="search-city" method="post" action=".">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Buscar" />
+</form>
+{% else %}
+	<h3>{{ cidade }}</h3>
+	<div id="search-results">
+		{% include 'previsao.html' %}
+	</div>
+	<a href="/search" >Voltar </a>
+{% endif %}
+
+{% endblock %}

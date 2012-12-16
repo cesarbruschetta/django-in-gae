@@ -13,8 +13,10 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', home, name='home'),
     url(r'^hello/$', helloword, name='HelloWord'),
+    
     url(r'^cidade/([^\s]+)/$', capitais, name="Capitais"),
     
+    url(r'^search/$', search, name="Busca"),
     
     # url(r'^django_in_gae/', include('django_in_gae.foo.urls')),
     

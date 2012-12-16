@@ -46,6 +46,9 @@ h6 { font-size: 14px; margin: 0 0 5px 0; padding: 0; color: #333; }
 .image_fl { float: left; margin: 3px 15px 0 0; }
 .image_fr { float: right; margin: 3px 0 0 15px; }
 
+.red{color:red;}
+.blue{color:blue;}
+
 blockquote { font-style: italic; margin-left: 10px;}
 cite { font-weight: bold; color:#3b3823; }
 cite span { color: #696443; }
@@ -239,6 +242,15 @@ padding-right: 20px;
 	float:left;
 	width:100%;
 }
+#search-results{
+	float: left;
+    width: 100%;
+	min-height:200px;
+}
+#search-city{
+	min-height:200px;
+}
+
 
 .col_last {
 	margin-right: 0;

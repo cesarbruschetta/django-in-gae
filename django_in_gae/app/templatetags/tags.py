@@ -7,7 +7,10 @@ register = template.Library()
 @register.filter
 def convertDate(data):
     valor = data.split('-')
-    return '%s/%s/%s' %(valor[2],valor[1],valor[0])
+    try:
+        return '%s/%s/%s' %(valor[2],valor[1],valor[0])
+    except:
+        return '00/00/0000'
 
 @register.filter
 def limitTextSize(html, size):

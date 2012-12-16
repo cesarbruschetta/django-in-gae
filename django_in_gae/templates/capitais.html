@@ -3,33 +3,7 @@
 {% block title %} {{ cidade }} {% endblock %}
 {% block head %} Precisão do tempo da cidade de {{ cidade }}{% endblock %}
 {% block content %}
-{% load tags %}
-<div class="col_w300">
-	<h3>Tempo Agora</h3>
-	<div class="previsao hoje">
-		<p>{{ previsao.agora.day|title }}, {{ previsao.agora.date|convertDate }} - {{ previsao.agora.observationtime }}</p>
-		<div class="img-tempo">
-			<img src="{{ previsao.url }}/law/{{ previsao.agora.skycode }}.gif" />
-			<span>{{ previsao.agora.skytext }} - {{ previsao.agora.temperature }}°C</span>
-		</div> 
-	</div>
-	
-</div>
-<div class="col_w600">
-	<h3>Previsão próximos dias</h3>
 
-	{% for item in previsao.tempo %}
-		<div class="col_w220 previsao">
-			<p>{{ item.day|title }}, {{ item.date|convertDate }}</p>
-			<div class="img-tempo">
-				<img src="{{ previsao.url }}law/{{ item.skycodeday }}.gif" />
-				<span>{{ item.skytextday }}</span>
-			</div>		
-			<span>Minima: {{ item.low }}°C</span> 
-			<span>Máxima: {{ item.high }}°C</span>
-		</div>
-	{% endfor %}
-</table>
-</div>
+{% include 'previsao.html' %}
 
 {% endblock %}
