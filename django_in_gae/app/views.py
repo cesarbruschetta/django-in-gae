@@ -12,6 +12,7 @@ def helloword(request):
 
 def home(request):
     contexto = {}
+    WC_cod = 'BRXX0217'
     # Produção
     client_address = request.META.get('HTTP_X_FORWARDED_FOR') or request.META.get('REMOTE_ADDR')
     # Desenvolvimento
@@ -21,10 +22,12 @@ def home(request):
     #client_address = '178.33.147.177'
     
     info_geo = getGeoIPbyIP(client_address)
-    text = info_geo.get('city','')+','+info_geo.get('country_code','')
+    text = '%s %s' %(info_geo.get('city',''), info_geo.get('country_code',''))
     
     busca_cod = getCodigoCidadeWC(remover_acentos(text))
-    WC_cod = busca_cod[0].get('id','0')
+
+    if busca_cod:
+        WC_cod = busca_cod[0].get('id','0')
     
     data = parserDadosTempo(getPrevisaoByWC(WC_cod))
     contexto['previsao'] = data

@@ -49,7 +49,7 @@ def getCodigoCidadeWC(search):
          
     """
     response = urllib2.urlopen(URL_BUSCA+urllib2.quote(search))
-        
+            
     headers = response.info()
     data = response.read()
     try:
