@@ -18,8 +18,8 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from google.appengine.ext.webapp import util
 
 # Set versons of django
-from google.appengine.dist import use_library
-use_library('django', '1.3')
+# from google.appengine.dist import use_library
+# use_library('django', '1.3')
 
 # Force Django to reload its settings.
 from django.conf import settings

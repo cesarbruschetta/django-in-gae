@@ -1,13 +1,12 @@
 application: django-in-gae
 version: 1
-runtime: python
+runtime: python27
 api_version: 1
 threadsafe: no
 
 builtins:
 - appstats: on
 - deferred: on
-- datastore_admin: on
 - remote_api: on
 
 inbound_services:
@@ -30,3 +29,7 @@ handlers:
 - url: /.*
   script: main.py
   
+
+libraries:
+- name: django
+  version: "1.3"
