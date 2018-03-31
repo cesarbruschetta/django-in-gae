@@ -59,7 +59,7 @@ def getCodigoCidadeWC(search):
 
 def getGeoIPbyIP(ip):
     return IP_by_DataBase(ip)
-    #return IP_by_WebServer(ip)
+    # return IP_by_WebServer(ip)
 
 def IP_by_DataBase(ip):
     """

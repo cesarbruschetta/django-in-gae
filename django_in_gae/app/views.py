@@ -31,12 +31,12 @@ def home(request):
     client_address = choice(client_address_list)
 
     info_geo = getGeoIPbyIP(client_address)
-    text = '%s %s' %(info_geo.get('city',''), info_geo.get('country_code',''))
+    text = '%s' %(info_geo.get('city',''))
 
     busca_cod = getCodigoCidadeWC(remover_acentos(text))
 
     if busca_cod:
-        WC_cod = busca_cod[0].get('id','0')
+        WC_cod = busca_cod[0].get('id', WC_cod)
 
     data = parserDadosTempo(getPrevisaoByWC(WC_cod))
     contexto['previsao'] = data
